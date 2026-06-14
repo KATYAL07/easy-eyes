@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "jetro": {
+      "type": "stdio",
+      "command": "C:\\Users\\Arnav\\.jetro\\runtime\\node-win32-x64.exe",
+      "args": [
+        "C:\\Users\\Arnav\\.jetro\\mcp-server\\index.js"
+      ],
+      "env": {
+        "JET_WORKSPACE": "c:\\Users\\Arnav\\Desktop\\easy eyes",
+        "JET_API_URL": "https://api.jetro.ai",
+        "PATH": "C:\\Users\\Arnav\\.jetro\\runtime;C:\\Program Files\\Microsoft\\jdk-17.0.18.8-hotspot\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\cursor\\resources\\app\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Cloudflare\\Cloudflare WARP\\;C:\\Program Files\\komorebi\\bin\\;C:\\Users\\Arnav\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Arnav\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Arnav\\AppData\\Local\\Programs\\Antigravity\\bin;C:\\Users\\Arnav\\AppData\\Local\\PowerToys\\DSCModules\\;C:\\Users\\Arnav\\AppData\\Roaming\\npm;C:\\Users\\Arnav\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+      }
+    }
+  }
+}

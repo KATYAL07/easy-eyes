@@ -1,0 +1,470 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Easy Eyes - Product Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container": "#f2f0c8",
+                "on-secondary": "#ffffff",
+                "tertiary-fixed": "#fcdeb6",
+                "surface-dim": "#dedcb5",
+                "surface-bright": "#fdfbd3",
+                "on-primary-fixed-variant": "#544435",
+                "on-tertiary": "#ffffff",
+                "on-secondary-container": "#716041",
+                "surface-container-lowest": "#ffffff",
+                "secondary-fixed": "#f7dfb9",
+                "on-primary-container": "#9a8674",
+                "on-primary-fixed": "#25190d",
+                "primary": "#150a02",
+                "on-error": "#ffffff",
+                "primary-fixed": "#f7deca",
+                "tertiary": "#150b00",
+                "tertiary-container": "#2f2006",
+                "on-secondary-fixed-variant": "#544528",
+                "on-surface-variant": "#4e453e",
+                "on-secondary-fixed": "#251a03",
+                "outline": "#7f756d",
+                "on-tertiary-fixed": "#271902",
+                "on-surface": "#1c1d05",
+                "inverse-primary": "#dac2af",
+                "surface-container-high": "#eceac3",
+                "primary-container": "#2d2013",
+                "secondary-fixed-dim": "#dac49e",
+                "on-tertiary-fixed-variant": "#574426",
+                "on-error-container": "#93000a",
+                "background": "#fdfbd3",
+                "surface-container-highest": "#e6e4be",
+                "primary-fixed-dim": "#dac2af",
+                "secondary-container": "#f4ddb6",
+                "tertiary-fixed-dim": "#dec29c",
+                "on-background": "#1c1d05",
+                "outline-variant": "#d1c4bb",
+                "error-container": "#ffdad6",
+                "inverse-surface": "#323217",
+                "surface-variant": "#e6e4be",
+                "on-primary": "#ffffff",
+                "on-tertiary-container": "#9f8664",
+                "secondary": "#6d5c3d",
+                "error": "#ba1a1a",
+                "surface-tint": "#6d5b4b",
+                "surface-container-low": "#f8f6ce",
+                "surface": "#fdfbd3",
+                "inverse-on-surface": "#f5f3cb"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "section-gap": "120px",
+                "margin-mobile": "20px",
+                "content-gap": "48px",
+                "gutter": "24px",
+                "margin-desktop": "80px"
+        },
+        "fontFamily": {
+                "headline-lg": [
+                        "Montserrat"
+                ],
+                "label-caps": [
+                        "Montserrat"
+                ],
+                "body-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "display-lg": [
+                        "Montserrat"
+                ],
+                "headline-lg-mobile": [
+                        "Montserrat"
+                ],
+                "body-md": [
+                        "Plus Jakarta Sans"
+                ],
+                "headline-md": [
+                        "Montserrat"
+                ]
+        },
+        "fontSize": {
+                "headline-lg": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-caps": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.15em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "64px",
+                        {
+                                "lineHeight": "72px",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "letterSpacing": "0.02em",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        body {
+            background-color: #fdfbd3; /* Fallback if tailwind hasn't loaded yet, matching background config */
+        }
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 300,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hide scrollbar for gallery */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary font-body-md text-body-md">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-surface/80 dark:bg-surface-container-low/80 backdrop-blur-md border-b border-outline-variant/30 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6">
+<!-- Mobile Menu Icon (Placeholder) -->
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary cursor-pointer">menu</span>
+</div>
+<!-- Brand -->
+<a class="flex items-center" href="#">
+<img alt="EASY EYES" class="h-8 md:h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATaGZZaPr-N-lcKKwCj2Wg5I-dihjvDIAbe0ER9S2HkOcel5zCY3xptc-0c-HqAiGGzuWCvImdVQrJPXX4AT8sQfSifNB_3usMohHjh8Nnxu66vcXnQ09zEtE1H9J72rt8IhOzj5pdyQazlYJoXvkY4PpTMFMQtbkLHMmgxvsIbsuWpWMz4BU72bpXBFQ3Vwrn-qU88h1iVQ2u1WQPBitB8nHLDHC_z8hiuA7gCSryU72Srwj-6B2r5i2gibmoD_uRsWa9TVB7kUg">
+</a>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex space-x-12">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 uppercase" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-primary dark:text-primary-fixed border-b border-primary/50 pb-1 uppercase" href="#">Shop</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 uppercase" href="#">Brands</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 uppercase" href="#">Face Shapes</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 uppercase" href="#">Contact</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center space-x-6">
+<button aria-label="Search" class="text-primary hover:opacity-70 transition-opacity duration-200">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button aria-label="Profile" class="text-primary hover:opacity-70 transition-opacity duration-200 hidden md:block">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button aria-label="Cart" class="text-primary hover:opacity-70 transition-opacity duration-200 relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary-container text-on-primary w-4 h-4 flex items-center justify-center rounded-full text-[10px] font-bold">2</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-12 pb-section-gap">
+<!-- Breadcrumbs -->
+<div class="px-margin-mobile md:px-margin-desktop mb-8">
+<div class="flex items-center space-x-2 font-label-caps text-label-caps text-on-surface-variant uppercase">
+<a class="hover:text-primary transition-colors" href="#">Shop</a>
+<span>/</span>
+<a class="hover:text-primary transition-colors" href="#">Sunglasses</a>
+<span>/</span>
+<span class="text-primary">The Monaco</span>
+</div>
+</div>
+<!-- Product Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter mb-section-gap">
+<!-- Image Gallery (Left Side) -->
+<div class="md:col-span-7 flex flex-col-reverse md:flex-row gap-4">
+<!-- Thumbnails (Desktop: Left, Mobile: Bottom) -->
+<div class="flex md:flex-col gap-4 overflow-x-auto no-scrollbar md:w-24 flex-shrink-0">
+<button class="w-20 h-24 md:w-full bg-surface-container-low rounded border border-primary/20 p-1 flex-shrink-0">
+<img alt="Thumbnail 1" class="w-full h-full object-cover rounded-sm mix-blend-multiply" data-alt="A close-up studio shot of luxurious, thick-framed black sunglasses resting on a subtle cream textured surface. The lighting is soft and diffused, highlighting the glossy finish of the acetate frames. The aesthetic is clean, minimalist, and editorial, evoking a sense of high-end fashion and old-money elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmZSw4aWZlB0A-0DbXB8phbP1vai1GSzT6JNhEcThjE_vkZfm2oovFt7fTKDaOwiK4kCpNQJcr_IyTo66VhzEi7Xh6Y-0BZ2v7-aGv2j671_c-6AJ7Yog36--jJC1KlzItNqcrKQ6IJIzEnjmiWTB-wYNHQdwAC1wRXJOlgo42WCiRXkbghMHFj9CrHmC06edsHrJLgVpEY8HCvoP4AsLoXSezMvvN0CXktil3fa4m8D_DmV4nxf3LB6ZCUh1BHPZoXK2zxfB71Mo">
+</button>
+<button class="w-20 h-24 md:w-full bg-surface-container-low rounded border border-transparent hover:border-primary/20 transition-colors p-1 flex-shrink-0 opacity-70 hover:opacity-100">
+<img alt="Thumbnail 2" class="w-full h-full object-cover rounded-sm mix-blend-multiply" data-alt="A side-profile view of premium black sunglasses placed diagonally on a beige background. The focus is on the sturdy hinges and the sleek curve of the temples. The lighting casts a gentle, warm shadow, emphasizing the depth and structural integrity of the eyewear. The overall mood is sophisticated and refined." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXa2EEZvLJkHIiWQxEeCHF3TwoZXrNzjwGwFmJas12WEpey1P2YAwOe2-h3kQ1jtoM8FxBT9P_a_T00CYNetoxEi0UGFBL8_Sc_AdRROBsv4Gyg6eOaDebloQc7C1fHJcjZmNgq9GPHBHCr5F3Euq5AjyIUhQnBOlehAVLwyP0LK8bAGPmg8iMF0--SoDPIMl0BOuO6phVc43HVRHJT92txK5Q92L5r4GEe3rKCmaOd5sjXsqpW_I3_VBU4XRnxJnjvZFsSnWng3M">
+</button>
+<button class="w-20 h-24 md:w-full bg-surface-container-low rounded border border-transparent hover:border-primary/20 transition-colors p-1 flex-shrink-0 opacity-70 hover:opacity-100">
+<img alt="Thumbnail 3" class="w-full h-full object-cover rounded-sm mix-blend-multiply" data-alt="An overhead flat-lay shot of elegant black sunglasses paired with a dark espresso-brown microfiber cleaning cloth featuring a subtle minimalist logo. They are arranged on a pale yellow-cream surface. The composition is highly stylized and asymmetric, fitting for a luxury lifestyle magazine spread." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDebjhDifEomMPm2pHxRdICuUmVxHIt40chlNF0AluxBc-gtHyGmAuf50xvbfhZLfl2d96GWMycxtu25i3XRw_elzETsWJOD7P-vDLOQ-o4fSvuX7ChxsJPYpYjdOI3BL-3IkmGO0p2esNT1rOq9Tp6Nbx7RFMbFTmVpyP2Jq5pPkW_gW3yBvQOb1gx1GSkQ1yl4jwuWnLGQ60CIg3w77Ab8ogcGFlaBvH2FwL3vtfqXbmAbM9u6eMEjanQ5_MSBryfHXMPm8gLE68">
+</button>
+</div>
+<!-- Main Image -->
+<div class="w-full bg-surface-container-low rounded-xl relative overflow-hidden group flex-grow aspect-square md:aspect-[4/5]">
+<!-- Placeholder for actual product image based on provided inspiration -->
+<img alt="Main Product Image" class="w-full h-full object-cover object-center mix-blend-multiply transition-transform duration-700 group-hover:scale-105" data-alt="A large, striking hero shot of thick, black rectangular sunglasses. The frames have a high-gloss finish, reflecting soft, ambient studio light. They are set against a pristine, soft cream background, creating a high-contrast, luxurious visual. The lighting creates subtle, multi-layered shadows that give the image a lifted, three-dimensional feel without looking artificial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0SaOH_L_5z6mrmaE465S3pBMb0MgHN2B5wl0CbteqS6B-OlnndF7ngYu4Zf1g4eEyLupP3dmAgcaLT0tXDkJB4Ofik2RgJfw_Jn5IRucqNteXkk_Nio-ZkI9AP5OWOvqD190iGfbg9nOq1ZB7b8QMy-hShkTvO5CxNNEbH4XuwnGdgOLSG6bWqnqnOiZ-k_NC03WsAKLXRDC7Ata_UkNqmptlucnhcI2xUCRzlQyB4nWFwkqTrKx_cenMDoM_Ac3M40Gx4U7whCc">
+<div class="absolute top-4 left-4">
+<span class="bg-primary-container text-on-primary font-label-caps text-[10px] px-3 py-1 rounded-sm tracking-widest uppercase">Best Seller</span>
+</div>
+</div>
+</div>
+<!-- Product Details (Right Side) -->
+<div class="md:col-span-5 md:pl-8 flex flex-col justify-center">
+<div class="mb-6">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-2 uppercase">The Monaco</h1>
+<p class="font-headline-md text-headline-md text-on-surface-variant font-light">₹245.00</p>
+</div>
+<div class="mb-8">
+<p class="font-body-md text-body-md text-on-surface-variant/80 leading-relaxed">
+                        Inspired by the Riviera sun, The Monaco embodies timeless confidence. Handcrafted from premium Italian acetate, these bold rectangular frames offer a structured silhouette that commands attention while remaining quietly elegant.
+                    </p>
+</div>
+<!-- Color Selection -->
+<div class="mb-8 border-t border-outline-variant/30 pt-6">
+<span class="block font-label-caps text-label-caps text-primary uppercase mb-4">Color: <span class="text-on-surface-variant ml-2">Onyx Black</span></span>
+<div class="flex space-x-3">
+<button aria-label="Onyx Black" class="w-8 h-8 rounded-full bg-black ring-2 ring-primary ring-offset-2 ring-offset-background"></button>
+<button aria-label="Havana Tortoise" class="w-8 h-8 rounded-full bg-[#5C4033] ring-1 ring-outline hover:ring-primary transition-all ring-offset-2 ring-offset-background"></button>
+<button aria-label="Champagne" class="w-8 h-8 rounded-full bg-[#F5F5DC] border border-outline-variant ring-1 ring-transparent hover:ring-primary transition-all ring-offset-2 ring-offset-background"></button>
+</div>
+</div>
+<!-- Add to Bag CTA -->
+<div class="mb-8">
+<button class="w-full bg-primary-container text-on-primary font-label-caps text-label-caps py-5 px-6 rounded hover:bg-primary-container/90 transition-colors uppercase tracking-widest flex justify-center items-center group">
+<span>Add to Bag</span>
+<span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</button>
+<div class="mt-4 flex justify-between text-xs text-on-surface-variant/70 uppercase tracking-wide">
+<span class="flex items-center"><span class="material-symbols-outlined text-[16px] mr-1">local_shipping</span> Free Shipping</span>
+<span class="flex items-center"><span class="material-symbols-outlined text-[16px] mr-1">sync</span> 30-Day Returns</span>
+</div>
+</div>
+<!-- Accordion Details -->
+<div class="border-t border-outline-variant/30 divide-y divide-outline-variant/30">
+<details class="group py-4" open="">
+<summary class="flex justify-between items-center cursor-pointer list-none font-label-caps text-label-caps uppercase text-primary">
+                            Details &amp; Fit
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="pt-4 font-body-md text-body-md text-on-surface-variant/80">
+<ul class="list-disc pl-5 space-y-2">
+<li>Handcrafted Italian Acetate</li>
+<li>CR-39 lenses with 100% UVA/UVB protection</li>
+<li>5-barrel hinges for maximum durability</li>
+<li>Fit: Medium to Wide</li>
+<li>Measurements: 52-20-145</li>
+</ul>
+</div>
+</details>
+<details class="group py-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-label-caps text-label-caps uppercase text-primary">
+                            Face Shape Guide
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="pt-4 font-body-md text-body-md text-on-surface-variant/80">
+<p>The structured, angular design of The Monaco provides excellent contrast for <strong>Round</strong> and <strong>Oval</strong> face shapes, helping to define facial features.</p>
+</div>
+</details>
+<details class="group py-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-label-caps text-label-caps uppercase text-primary">
+                            Shipping &amp; Returns
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="pt-4 font-body-md text-body-md text-on-surface-variant/80">
+<p>Complimentary standard shipping on all orders. Unworn items can be returned within 30 days of delivery for a full refund or exchange. Custom engraved items are final sale.</p>
+</div>
+</details>
+</div>
+</div>
+</section>
+<!-- Editorial/Material Highlight -->
+<section class="bg-surface-container-low py-24 mb-section-gap">
+<div class="px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-content-gap items-center">
+<div class="order-2 md:order-1 flex flex-col justify-center">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6 uppercase">Uncompromising Quality</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-lg">
+                        We believe in quiet luxury. Every pair of Easy Eyes is meticulously crafted over a 6-week process, ensuring the acetate cures perfectly for a finish that feels as rich as it looks. The hinges are forged for resilience, designed to endure the test of time and trend.
+                    </p>
+<a class="inline-flex items-center font-label-caps text-label-caps text-primary uppercase tracking-widest border-b border-primary pb-1 w-max hover:text-secondary hover:border-secondary transition-colors" href="#">
+                        Discover Our Craft <span class="material-symbols-outlined ml-2 text-[18px]">east</span>
+</a>
+</div>
+<div class="order-1 md:order-2">
+<img alt="Craftsmanship detail" class="w-full h-[500px] object-cover rounded-sm shadow-sm" data-alt="A close-up, macro shot of the metal hinge connecting the thick acetate frame and temple of a pair of luxury sunglasses. The lighting is warm and directional, highlighting the brushed gold texture of the metal against the deep brown tortoiseshell pattern of the frame. The background is a soft, out-of-focus beige, creating a sophisticated, high-end editorial feel emphasizing craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuZlWeGgF8sX01Zj51L-G0vQIJAgWtNKwO300A7-kuys93bH5EsA1yYvFJnu0S0O3Ooiu90CzXFbMIspUJG1IUj6e_CerBj82Vbj882-4G0Hxii9eJ56hcIEhpAdPZjpnAA5aFPZzBYqJroNvLU4DycEKgVvJnRA4WllfjrZLkLxgQrHMnE_NnryHITQqNzyiKrswke80UaWjoK6xuTUc_IlgBfyDXl4n1UNDeEGMcGZx2Wcyf8PpNtqzGLAQ1noBGbz_XvLyzgq4">
+</div>
+</div>
+</section>
+<!-- Complete The Look / Related Products -->
+<section class="px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-12 border-b border-outline-variant/30 pb-4">
+<h3 class="font-headline-md text-headline-md text-primary uppercase">Curated For You</h3>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors uppercase tracking-widest hidden md:block" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="group cursor-pointer">
+<div class="bg-surface-container-low aspect-square rounded-sm mb-4 relative overflow-hidden transition-colors duration-300 group-hover:bg-surface-container flex items-center justify-center p-6">
+<img alt="The Paris" class="w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A pair of elegant, oversized cat-eye sunglasses with tortoiseshell frames, resting on a clean, light cream surface. Studio lighting creates soft reflections on the lenses. The composition is minimal and sophisticated, fitting a luxury eyewear brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkJBAa3NfnuOv3vgKgimoUv1Y-FWZaRuavD-IYMNmDCRnFx_dWsqba8ZZGessoWTShDzryeBAMqi-jSkJlGtLpC0AW-zkffKZFM2ppfNCuzuot79Dkd8Uff8sUAyytQS0PdAmJ_JEOcHYsRIohY12041fW6WC_j46MSDus6gLQgsSUI9BLWsBdBFzWMP71lvF71VK11j0uf6m976WVWvwftelUIZRfb3uYHToGCmZvzGHIAidHKgloYRZdk_2ITDgxe83Q1t-aC8s">
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-primary-container text-on-primary font-label-caps text-[10px] px-4 py-2 rounded uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            Quick Add
+                        </button>
+</div>
+<div class="text-center">
+<h4 class="font-label-caps text-[14px] text-primary uppercase mb-1">The Paris</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">₹265.00</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group cursor-pointer">
+<div class="bg-surface-container-low aspect-square rounded-sm mb-4 relative overflow-hidden transition-colors duration-300 group-hover:bg-surface-container flex items-center justify-center p-6">
+<img alt="The Milan" class="w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Sleek, gold-rimmed aviator sunglasses with dark green lenses, positioned elegantly on a soft beige background. Warm, directional lighting casts subtle shadows, highlighting the thin, refined metalwork. The aesthetic is classic, timeless, and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByonTWlq4A2h-0-CPxBDiKR0Hmd95vnLQ6pc7k0KX-V-uEl9zHz-zr3K_PoXd7lTDOZ8I4Y1Qlzn5npEUIb95JlOa4apAvR-CPZ2Jmc-Q-OCFDTYphS8QzoUKa5OTdaXmD12qPMdi3-30YrLH-ICWu0zAldHxdhLYUECh6DdfulRwHBDsHZwxoPf9Ln-JA2LBJSlK37G04f7ArECDZ8ifUdRzZWUnJ_8KC6176tmZUP3GtCw6YoSb1Mq8vi94Wg6j4kjfoLP0G-zE">
+</div>
+<div class="text-center">
+<h4 class="font-label-caps text-[14px] text-primary uppercase mb-1">The Milan</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">₹285.00</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group cursor-pointer hidden md:block">
+<div class="bg-surface-container-low aspect-square rounded-sm mb-4 relative overflow-hidden transition-colors duration-300 group-hover:bg-surface-container flex items-center justify-center p-6">
+<img alt="Premium Care Kit" class="w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A luxurious eyewear care kit featuring a dark espresso brown microfiber cloth and a small glass spray bottle, arranged neatly on a pale yellow background. The lighting is soft and diffuse. The setting conveys meticulous care and high-end brand experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjCe_JcNmtnK0hnS-0B-WGLF-jX5A4xnm_N0EqipiZnP_laHgm4VJXE_00xjCGzCy74R2NjV_DV8mrAgc4L0ZnwEKdW1idNXSixHQRKyu2hWAZY0LXdmpWZwlN9gz9uFywpN1uIYBE-kotpUB33bbUpvgqOjDrwHky_BsH6C2I0kPsL1y1le_8Ns3Q_hLP5OeebmdW7J_edi8j25eTbvqPmBnl-N5X4V5P_HDa629G0DDm0OIecSPE6AGSiyQJrO9xz-OVx3uhLWU">
+</div>
+<div class="text-center">
+<h4 class="font-label-caps text-[14px] text-primary uppercase mb-1">Premium Care Kit</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">₹45.00</p>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group cursor-pointer hidden lg:block">
+<div class="bg-surface-container-low aspect-square rounded-sm mb-4 relative overflow-hidden transition-colors duration-300 group-hover:bg-surface-container flex items-center justify-center p-6">
+<img alt="Leather Case" class="w-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500 filter sepia-[0.3]" data-alt="A structured, rich brown leather sunglasses case closed securely, resting on a smooth cream surface. The texture of the fine leather is visible under warm, inviting light. The image exudes heritage, quality, and understated luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO77cLxWzk20iUsLnvviY_KJcVuZaKpuN_MosnbNXeXzF0l4Hk_v-Lh2UaRN1SoSchDGmTSBIAmfOv0mM1n3H9E_aYsvy2U_G86m4fumoNlDINO5SmOjUHzObKyDPt2asxnTerb11t2nOqbfKYRJ-ypHxVyAIgTxaYP2DTXy8mN-C41wCuTbv8WTDtF68CdRA7H9dLFqeNPx0A3Gvo573b7iM1cwbLpTk2jOBB5-GntefpUnfDely-SMElNHac6J4u5PhTa8vh6uI">
+</div>
+<div class="text-center">
+<h4 class="font-label-caps text-[14px] text-primary uppercase mb-1">Heritage Leather Case</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">₹95.00</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-primary-container text-on-primary-container dark:text-on-primary-container font-body-md text-body-md w-full pt-section-gap pb-12">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop mx-auto">
+<!-- Brand Column -->
+<div class="md:col-span-4 mb-12 md:mb-0">
+<div class="mb-6">
+<img alt="EASY EYES" class="h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATaGZZaPr-N-lcKKwCj2Wg5I-dihjvDIAbe0ER9S2HkOcel5zCY3xptc-0c-HqAiGGzuWCvImdVQrJPXX4AT8sQfSifNB_3usMohHjh8Nnxu66vcXnQ09zEtE1H9J72rt8IhOzj5pdyQazlYJoXvkY4PpTMFMQtbkLHMmgxvsIbsuWpWMz4BU72bpXBFQ3Vwrn-qU88h1iVQ2u1WQPBitB8nHLDHC_z8hiuA7gCSryU72Srwj-6B2r5i2gibmoD_uRsWa9TVB7kUg">
+</div>
+<p class="text-on-primary-container/80 max-w-sm mb-8">
+                    Curating timeless eyewear for the modern discerning individual. Designed with intention, crafted with heritage.
+                </p>
+<div class="flex space-x-4">
+<!-- Social Placeholders -->
+<a class="text-on-primary-container/80 hover:text-secondary-fixed transition-colors" href="#"><span class="material-symbols-outlined">camera_alt</span></a>
+<a class="text-on-primary-container/80 hover:text-secondary-fixed transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<!-- Links Columns -->
+<div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+<div>
+<h3 class="font-label-caps text-label-caps text-secondary-fixed uppercase tracking-widest mb-6">Shop</h3>
+<ul class="space-y-4">
+<li><a class="text-on-primary-container/80 hover:text-secondary-fixed transition-colors duration-300" href="#">Shop by Face Shape</a></li>
+<li><a class="text-on-primary-container/80 hover:text-secondary-fixed transition-colors duration-300" href="#">Shop by Frame Shape</a></li>
+<li><a class="text-on-primary-container/80 hover:text-secondary-fixed transition-colors duration-300" href="#">Shop by Brand</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-secondary-fixed uppercase tracking-widest mb-6">Support</h3>
+<ul class="space-y-4">
+<li><a class="text-on-primary-container/80 hover:text-secondary-fixed transition-colors duration-300" href="#">Contact Us</a></li>
+<li><a class="text-on-primary-container/80 hover:text-secondary-fixed transition-colors duration-300" href="#">Shipping &amp; Returns</a></li>
+<li><a class="text-on-primary-container/80 hover:text-secondary-fixed transition-colors duration-300" href="#">Care Guide</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-secondary-fixed uppercase tracking-widest mb-6">Legal</h3>
+<ul class="space-y-4">
+<li><a class="text-on-primary-container/80 hover:text-secondary-fixed transition-colors duration-300" href="#">Privacy Policy</a></li>
+<li><a class="text-on-primary-container/80 hover:text-secondary-fixed transition-colors duration-300" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<!-- Copyright -->
+<div class="md:col-span-12 mt-16 pt-8 border-t border-outline-variant/10 text-center md:text-left text-sm text-on-primary-container/60">
+<p>© 2025 EASY EYES. Curated by Ronak Baweja.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple script to handle thumbnail clicks to change main image
+        document.addEventListener('DOMContentLoaded', () => {
+            const thumbnails = document.querySelectorAll('button img[alt^="Thumbnail"]');
+            const mainImage = document.querySelector('img[alt="Main Product Image"]');
+
+            thumbnails.forEach(thumb => {
+                thumb.parentElement.addEventListener('click', () => {
+                    // Update main image source and alt text
+                    const newSrc = thumb.src.replace('w=400', 'w=1200'); // Assuming unsplash params
+                    mainImage.src = newSrc;
+                    
+                    // Simple visual feedback for active thumbnail
+                    thumbnails.forEach(t => {
+                        t.parentElement.classList.remove('border-primary/20', 'opacity-100');
+                        t.parentElement.classList.add('border-transparent', 'opacity-70');
+                    });
+                    thumb.parentElement.classList.remove('border-transparent', 'opacity-70');
+                    thumb.parentElement.classList.add('border-primary/20', 'opacity-100');
+                });
+            });
+        });
+    </script>
+</body></html>

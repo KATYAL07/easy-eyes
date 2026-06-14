@@ -1,0 +1,344 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>EASY EYES | Timeless Vision</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1c1d05",
+                        "primary-container": "#2d2013",
+                        "on-secondary-fixed-variant": "#544528",
+                        "on-secondary-fixed": "#251a03",
+                        "on-error-container": "#93000a",
+                        "secondary": "#6d5c3d",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#f7dfb9",
+                        "surface-dim": "#dedcb5",
+                        "on-primary-fixed": "#25190d",
+                        "tertiary-fixed": "#fcdeb6",
+                        "surface-container-high": "#eceac3",
+                        "on-secondary-container": "#716041",
+                        "secondary-container": "#f4ddb6",
+                        "primary": "#150a02",
+                        "on-tertiary-fixed-variant": "#574426",
+                        "on-background": "#1c1d05",
+                        "inverse-surface": "#323217",
+                        "surface-container-low": "#f8f6ce",
+                        "on-surface-variant": "#4e453e",
+                        "secondary-fixed-dim": "#dac49e",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#6d5b4b",
+                        "outline-variant": "#d1c4bb",
+                        "outline": "#7f756d",
+                        "background": "#fdfbd3",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#9f8664",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e6e4be",
+                        "inverse-on-surface": "#f5f3cb",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#9a8674",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#dac2af",
+                        "surface-container": "#f2f0c8",
+                        "primary-fixed": "#f7deca",
+                        "tertiary": "#150b00",
+                        "surface-bright": "#fdfbd3",
+                        "primary-fixed-dim": "#dac2af",
+                        "tertiary-container": "#2f2006",
+                        "surface-variant": "#e6e4be",
+                        "surface": "#fdfbd3",
+                        "on-primary-fixed-variant": "#544435",
+                        "tertiary-fixed-dim": "#dec29c",
+                        "on-tertiary-fixed": "#271902"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "content-gap": "48px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "label-caps": ["Montserrat"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "display-lg": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, transform;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+        
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<nav class="sticky top-0 w-full bg-surface/80 dark:bg-surface-container-low/80 backdrop-blur-md border-b border-outline-variant/30 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 z-50 transition-colors duration-300">
+<a href="#">
+<img alt="Easy Eyes Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATaGZZaPr-N-lcKKwCj2Wg5I-dihjvDIAbe0ER9S2HkOcel5zCY3xptc-0c-HqAiGGzuWCvImdVQrJPXX4AT8sQfSifNB_3usMohHjh8Nnxu66vcXnQ09zEtE1H9J72rt8IhOzj5pdyQazlYJoXvkY4PpTMFMQtbkLHMmgxvsIbsuWpWMz4BU72bpXBFQ3Vwrn-qU88h1iVQ2u1WQPBitB8nHLDHC_z8hiuA7gCSryU72Srwj-6B2r5i2gibmoD_uRsWa9TVB7kUg">
+</a>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-label-caps text-label-caps text-primary dark:text-primary-fixed border-b border-primary/50 pb-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Shop</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Brands</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Face Shapes</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-6 text-on-surface-variant">
+<button aria-label="search" class="hover:text-primary transition-colors duration-300 Active: opacity-70 transition-opacity duration-200">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button aria-label="person" class="hover:text-primary transition-colors duration-300 Active: opacity-70 transition-opacity duration-200">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button aria-label="shopping_bag" class="hover:text-primary transition-colors duration-300 Active: opacity-70 transition-opacity duration-200">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</nav>
+<header class="relative w-full h-[870px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-secondary-container mix-blend-multiply opacity-20 z-10"></div>
+<img alt="A high-end fashion editorial shot of a person wearing stylish sunglasses in a sun-drenched architectural setting. Warm golden hour lighting casts sharp, dramatic shadows, conveying timeless luxury and modern confidence. The overarching aesthetic relies on warm earthy tones, deep espresso shadows, and a sophisticated, minimalist composition." class="absolute inset-0 w-full h-full object-cover object-center z-0 scale-105 transform origin-center" data-alt="A high-end fashion editorial shot of a person wearing stylish sunglasses in a sun-drenched architectural setting. Warm golden hour lighting casts sharp, dramatic shadows, conveying timeless luxury and modern confidence. The overarching aesthetic relies on warm earthy tones, deep espresso shadows, and a sophisticated, minimalist composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTsiSc2RjeoUorN_lg86mF_GLMIglmIyHJV4FBa4CN_AyoQoEN44WsegXM7lR2YQOwovIduuSsmOICgnSGkhQg9fV1H7Kx_b3PSGTClD8qekJYDk68VGyWft6tYKIkZ_0TzPu_3gFxnl8X8JK4pnshYirjlf6jzGCg7B_EcRU247x_lkHaFlOlkrxAH9WXN5ltPyQyMeE5zR0IiuK1jcPZWEcVUQ9k2YOh8k5bUaTGrn1IxMiIa7sqdfQPGSkSOFOjGR4Y8HQjy0E" style="animation: subtleZoom 20s infinite alternate;">
+<div class="relative z-20 text-center px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto flex flex-col items-center mt-20">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary mb-8 fade-in-section is-visible">
+                At EasyEyes, we believe great vision deserves great style.
+            </h1>
+<p class="font-body-lg text-body-lg text-primary-container max-w-2xl mb-12 fade-in-section is-visible" style="transition-delay: 100ms;">
+                Designed for the modern mover, our sunglasses blend clarity, confidence, and comfort—all at an affordable price.
+            </p>
+<a class="inline-flex items-center justify-center px-10 py-4 bg-primary text-on-primary font-label-caps text-label-caps rounded uppercase tracking-widest hover:bg-tertiary transition-colors duration-300 fade-in-section is-visible" href="#" style="transition-delay: 200ms;">
+                Shop the Collection
+            </a>
+</div>
+</header>
+<main>
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop fade-in-section">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<a class="group md:col-span-7 h-[600px] relative overflow-hidden flex items-end p-12 bg-surface-container" href="#">
+<img alt="A close-up fashion portrait focusing on the elegant structure of a woman's face and the perfect geometric fit of her oversized sunglasses. Studio lighting with warm, subtle beige undertones highlights the premium acetate frames against a minimalist, soft cream background, exuding quiet luxury." class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up fashion portrait focusing on the elegant structure of a woman's face and the perfect geometric fit of her oversized sunglasses. Studio lighting with warm, subtle beige undertones highlights the premium acetate frames against a minimalist, soft cream background, exuding quiet luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASsGokQm9f9hnlQW-byviux2JZWjUBPUA5jGjQghzmJTehk0mXW8O3wHtB-yImPjYw9P7zloU8EI5a9PxxzzqVTLUfCHvnvYW-1PAslIYVU-LA6asv2c93713Oyq8pPgTnSSF4ck8I-5ojhAAEpqlnkoW2z3EFTv1zj4rb48usNtUkiMgEc7UWGDVxjcQn7xsVjC8o0hiVrwbSqER5luLVQfzAEdGdBiB4hR8A9D6dd9ldaE5YMTbtT_ZzlOphEKNiKF5hu1-ASRs">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+<div class="relative z-10">
+<span class="inline-block px-3 py-1 mb-4 bg-primary text-on-primary font-label-caps text-label-caps rounded uppercase">Curated Guide</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary mb-2">Shop by Face Shape</h2>
+<div class="h-px w-0 bg-secondary-fixed group-hover:w-full transition-all duration-500"></div>
+</div>
+</a>
+<div class="md:col-span-5 flex flex-col gap-gutter">
+<a class="group flex-1 relative overflow-hidden flex items-end p-8 bg-surface-container" href="#">
+<img alt="A curated still life composition featuring multiple pairs of high-end designer sunglasses arranged meticulously on a textured, raw linen surface. Soft ambient lighting creates gentle layered shadows, emphasizing the craftsmanship, luxurious materials, and timeless corporate aesthetic of the eyewear collection." class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A curated still life composition featuring multiple pairs of high-end designer sunglasses arranged meticulously on a textured, raw linen surface. Soft ambient lighting creates gentle layered shadows, emphasizing the craftsmanship, luxurious materials, and timeless corporate aesthetic of the eyewear collection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJjgdeihlQkwzI9fTfO5CHr7Wk_o0GDkj5W8ZQvz9z0l1A-zp9nMEmU1NA7NcoAs9Zs8wDacB21DGcAnYUUo-2t8-IpYjraoD9yNBmcos9FJ1GZnTOkZaANTZMJlQs-1FygH65ho8jmQpToEMPp_u1ZSms116oixT8-qHPbglqt_KvJXJlXzgYqW9jnaJXIAhz8CaCQHmtYdB-W3H2ev6Da2fidlgqa_YYQJ_SVdeJnq9t6PJPr-pjijfHHMScAxixOvrgl9n2Qco">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500"></div>
+<div class="relative z-10 w-full flex justify-between items-center">
+<h2 class="font-headline-md text-headline-md text-on-primary">Shop by Brand</h2>
+<span class="material-symbols-outlined text-on-primary transform group-hover:translate-x-2 transition-transform duration-300">arrow_forward</span>
+</div>
+</a>
+<a class="group flex-1 relative overflow-hidden flex items-end p-8 bg-surface-container" href="#">
+<img alt="A sophisticated lifestyle shot capturing a stylish individual walking down a historic European cobblestone street, wearing timeless statement sunglasses. The scene is bathed in warm, sun-drenched golden hour light with a shallow depth of field, perfectly encapsulating an old-money, effortless elegance vibe." class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sophisticated lifestyle shot capturing a stylish individual walking down a historic European cobblestone street, wearing timeless statement sunglasses. The scene is bathed in warm, sun-drenched golden hour light with a shallow depth of field, perfectly encapsulating an old-money, effortless elegance vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLRT2iJfxOozif8uUbPRy2CW-wiKbfplmxXb6peI02eUWEjNCCILVrhwDZVHJlRxtYQLHK2lGUk32Pg_3gSD6q4lDP4iyTrHWt5If6jgkuRD8jE-rfcvjcsmUwyPY6UCn2czMil7xDXu0R05uBUBAxq-jWqH8_5gz1ubB-xkPNBc_FbtB9qBO9-htWHsJbtwHJKJFA01dHIhKvTnehk80kG2IeG67NsSdPtLr1XDX34M2UL5O2tEUk5GNxT3oDjpI3fI2nrFG7xKI">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500"></div>
+<div class="relative z-10 w-full flex justify-between items-center">
+<h2 class="font-headline-md text-headline-md text-on-primary">Shop by Style</h2>
+<span class="material-symbols-outlined text-on-primary transform group-hover:translate-x-2 transition-transform duration-300">arrow_forward</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop overflow-hidden fade-in-section">
+<div class="flex justify-between items-end mb-16 border-b border-outline-variant/30 pb-4">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Featured Selection</h2>
+<a class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors border-b border-transparent hover:border-primary pb-1 hidden md:block" href="#">View All</a>
+</div>
+<div class="flex overflow-x-auto gap-8 pb-8 no-scrollbar snap-x snap-mandatory">
+<div class="min-w-[280px] md:min-w-[320px] snap-start group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container-low mb-6 relative overflow-hidden transition-colors duration-500 group-hover:bg-surface-container flex items-center justify-center p-8">
+<img alt="Minimalist product photography of premium dark tortoise shell sunglasses resting on a subtle, warm-tinted cream background. Soft, diffused lighting creates an elegant, ultra-low opacity multi-layered drop shadow, highlighting the fine polish and heritage design without aggressive elevation." class="w-full h-auto object-contain transform group-hover:-translate-y-2 transition-transform duration-500 mix-blend-multiply" data-alt="Minimalist product photography of premium dark tortoise shell sunglasses resting on a subtle, warm-tinted cream background. Soft, diffused lighting creates an elegant, ultra-low opacity multi-layered drop shadow, highlighting the fine polish and heritage design without aggressive elevation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaMMJUX1wzRa7Taw4Vw3wbGEzUdqlQNtieWFTvY_acP1ie-6KqLeFD3eovXK4Kpw5ftJPe3NZO8veCV3WGXh4f0a2G5cD-3U3fArGWYYXn-1NlI29IpOWDtqKkDvKNSkcJj6hkEphSxNRMehGXGfsSYIazefiNI4tg_BkrXCyWuA1JTNvwDuEHQEnsceoi680lLvWd0HJML_qCzcQZ-mmoCzX0YSLwexqHORPE3MA_uNIUWExNp6R8GgdVqUWauX3_sB7tQ76VvSo">
+<div class="absolute bottom-4 left-0 w-full flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="px-6 py-2 bg-primary text-on-primary font-label-caps text-label-caps rounded uppercase shadow-sm">Quick Add</button>
+</div>
+</div>
+<div class="text-center">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase tracking-widest">Oliver Peoples</p>
+<h3 class="font-headline-md text-[18px] text-primary mb-2">The Gregory Peck</h3>
+<p class="font-body-md text-body-md text-secondary">₹380</p>
+</div>
+</div>
+<div class="min-w-[280px] md:min-w-[320px] snap-start group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container-low mb-6 relative overflow-hidden transition-colors duration-500 group-hover:bg-surface-container flex items-center justify-center p-8">
+<img alt="Minimalist product photography of sleek, modern black wireframe sunglasses presented against a warm, sun-drenched beige backdrop. The lighting is controlled to produce a soft ambient shadow, emphasizing the lightweight precision engineering and minimalist corporate aesthetic." class="w-full h-auto object-contain transform group-hover:-translate-y-2 transition-transform duration-500 mix-blend-multiply" data-alt="Minimalist product photography of sleek, modern black wireframe sunglasses presented against a warm, sun-drenched beige backdrop. The lighting is controlled to produce a soft ambient shadow, emphasizing the lightweight precision engineering and minimalist corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR207xVTms_5XXaMuZA5pmYEWHoiApI5VG8XDplhaCThedD-eS4natgQw8kksIeJlnAL4_IjhQ96i-7jP5vxwwJw0Vfb7c1jOKh0zCgQIOo-ATJ5QSWXFZAO95mQMswlt98le9SoWqh_xRCk4EdbbIFCBt0oHo0j1Jrqc9uhd9L3VWhu7xjXlupPDeNpykMGLUbey8ec3tZc0f6ipPAGRubLW5F4G8O3FBGaFMUTQFj69PEquG4JfXtNh7FMLP9PiIo9_beNqllbs">
+<div class="absolute bottom-4 left-0 w-full flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="px-6 py-2 bg-primary text-on-primary font-label-caps text-label-caps rounded uppercase shadow-sm">Quick Add</button>
+</div>
+</div>
+<div class="text-center">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase tracking-widest">Garrett Leight</p>
+<h3 class="font-headline-md text-[18px] text-primary mb-2">Kinney Sun</h3>
+<p class="font-body-md text-body-md text-secondary">₹340</p>
+</div>
+</div>
+<div class="min-w-[280px] md:min-w-[320px] snap-start group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container-low mb-6 relative overflow-hidden transition-colors duration-500 group-hover:bg-surface-container flex items-center justify-center p-8">
+<img alt="High-end editorial product shot of classic aviator sunglasses featuring gold frames and green lenses, laid flat on a pristine soft cream surface. Warm, subtle lighting enhances the metallic luster, embodying a timeless, heritage-rich old-money luxury feel." class="w-full h-auto object-contain transform group-hover:-translate-y-2 transition-transform duration-500 mix-blend-multiply" data-alt="High-end editorial product shot of classic aviator sunglasses featuring gold frames and green lenses, laid flat on a pristine soft cream surface. Warm, subtle lighting enhances the metallic luster, embodying a timeless, heritage-rich old-money luxury feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmBfA9RQlTn5nduBZzvQ0dm6Rize4sQWozkfRWYkEnTfxKhm65GFlKZNnglWyPbE_4d_O2wSRT15j3s448x_2mGD7CIook3yH-WMo4pLyk6_2wxc608VrmtL0VngDGdyRmRAekyGNq6IKISOjtuyLoBQwqmtQa_Kizr3aTJ6kRQr5puUGCPFhi6WIe0GqHSLV5Q6WRhKj1Ac3_gLgPSmx47jIvChKoVKMOModK2FZW_ww7gaLM0rODRjOEcwliZhR-9-PXn1ObFxI">
+<div class="absolute bottom-4 left-0 w-full flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="px-6 py-2 bg-primary text-on-primary font-label-caps text-label-caps rounded uppercase shadow-sm">Quick Add</button>
+</div>
+</div>
+<div class="text-center">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase tracking-widest">Ray-Ban</p>
+<h3 class="font-headline-md text-[18px] text-primary mb-2">Classic Aviator</h3>
+<p class="font-body-md text-body-md text-secondary">₹160</p>
+</div>
+</div>
+<div class="min-w-[280px] md:min-w-[320px] snap-start group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container-low mb-6 relative overflow-hidden transition-colors duration-500 group-hover:bg-surface-container flex items-center justify-center p-8">
+<img alt="Pristine still-life photograph of chunky, bold acetate sunglasses in a rich espresso brown, positioned precisely on a warm, light beige podium. The lighting is meticulous, creating gentle tonal shifts that highlight the sculpted frames without utilizing heavy, aggressive shadows." class="w-full h-auto object-contain transform group-hover:-translate-y-2 transition-transform duration-500 mix-blend-multiply" data-alt="Pristine still-life photograph of chunky, bold acetate sunglasses in a rich espresso brown, positioned precisely on a warm, light beige podium. The lighting is meticulous, creating gentle tonal shifts that highlight the sculpted frames without utilizing heavy, aggressive shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtY6qHLEDOO_18Y4SkAuQFPmhhQzq5m1kKMyfke7pR3q0b9boKnGL-iLfHR6gsHpJyYJyz33DOrP_cc32ICrvKhEInAhIb4Ym433k1SoCJuxl6os-1pSIHxODkaqN5U3YAWj6AblqVReR3yEA2j3CoZu8YNQE8HfnvmWpJ9Ld5SSsakc9_68l1Sg2-Y7y5R4VnRGtXOb3xgUCWZAuER1VoIE38F3Nz9PW5zzuDnxlSIgTF1g4BW0EviXMml0cVMpwV33cOCdw6emo">
+<div class="absolute bottom-4 left-0 w-full flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="px-6 py-2 bg-primary text-on-primary font-label-caps text-label-caps rounded uppercase shadow-sm">Quick Add</button>
+</div>
+</div>
+<div class="text-center">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase tracking-widest">Tom Ford</p>
+<h3 class="font-headline-md text-[18px] text-primary mb-2">Snowdon</h3>
+<p class="font-body-md text-body-md text-secondary">₹420</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-secondary-container py-section-gap px-margin-mobile md:px-margin-desktop fade-in-section">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-8" style="font-variation-settings: 'FILL' 1;">visibility</span>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-tight mb-8">
+                    With EasyEyes, you don't just see the world better—you see it in style, backed by a brand built on trust and timeless vision.
+                </h2>
+<div class="w-16 h-px bg-primary mx-auto mb-8"></div>
+<p class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Our Heritage</p>
+</div>
+</section>
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop fade-in-section border-t border-outline-variant/30">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<div>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Follow Our Journey</h2>
+<p class="font-body-md text-on-surface-variant">@easyeyes_official</p>
+</div>
+<div class="flex space-x-6 mt-6 md:mt-0">
+<a class="font-label-caps text-label-caps text-primary uppercase tracking-widest hover:text-secondary transition-colors" href="#">Instagram</a>
+<a class="font-label-caps text-label-caps text-primary uppercase tracking-widest hover:text-secondary transition-colors" href="#">Pinterest</a>
+<a class="font-label-caps text-label-caps text-primary uppercase tracking-widest hover:text-secondary transition-colors" href="#">Twitter</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-square bg-surface-container-low overflow-hidden group">
+<img alt="Aesthetic eyewear photography" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXZSbBxgS0q_DXhvUREyJsWW_bZAw6WkcAWvLsxochijK770YMDmnX8HtNSjk_OnBDUO3x6UuzrDhEWSIFj_eDE2hvyMcHcTabj7Eh784OKFOZwqIJisGN64A1cG6zjaoSXvtE-FEFLwpZiMB4BCNNtwB_K4r2NJUzXeHiW8KMhGE3BHHVtqlZ6S_yZBKGzY_tHMFZGkEjwkM17wM7RSIBdmDGXBEveJXBSvROubWe2pEdIpnDSBH2ofZFVW1jVrXzXDHrUqiAe5Y">
+</div>
+<div class="aspect-square bg-surface-container-low overflow-hidden group">
+<img alt="Aesthetic eyewear photography" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-azWAk3A9G9UGH6ZHTV-TImqXZjWsKyNkgKF_AJOr-BhXSFCN_ZXzUxFOuFzfH4hE9f5xM73B7uFf-7w2MhQBoZw2sp3B0cStOAsdIxMEm2Q3kxzNKsn8MTiD8lF0RHMPykVhRLcXDbOi-4FwgVtXOZ_FfdsdL4dkQ45XmQCfxvkjM1O31dzF6UeHeASzNVn7Y7RAVfbOPG-vUt1niavrVehaON1vWwAZEiaG21QNJeJaz0gKM5zthftaxGeDVbrhklw0-YNrti8">
+</div>
+<div class="aspect-square bg-surface-container-low overflow-hidden group">
+<img alt="Aesthetic eyewear photography" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmmOcfKjz4Ov2fvBMLE_gWqd_vWl9ZG5kcbyxuQSDf1BhD86RkKcn8e8fFFWx4dwYFm3f0NQmPYaNDetYFDc63JrWFXFcFtCKYqx6m0VHTZc6C-P60m_gC-p9jGAgK9gsxe8b1K8W0IjxfaCFkr6MCfvFP5LhnzYbLBBlL9aYAMVfEhm7MJVwmze6JQPjPTCwzqwEcLwCYBZosF5aGOFC2oT1n5xaRUIdusgOx6oHCukcRNwoJPgzJqyL0gRww9V9TcrrLeevFt_8">
+</div>
+<div class="aspect-square bg-surface-container-low overflow-hidden group">
+<img alt="Aesthetic eyewear photography" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKyhPaNcLvyLrgSzD0xnyN81ZugcU1ll_C_HgTVRscA882labig3NMnC5X3f7bq1GhvIRFLW4S7TAwPVLAkyWcGJihwOYpGVjuFOl8iiqdhtVS9jyKmKsPM7NnGQisYAuh8g4RjjCLFzl0jwwK2elMAx1bCPQ8x4IkLhQcprVghmw1hIVDboYt6sBRYqlC1HCyiV8yfUrEUt-wqgcY2k4etk00bZep3ltLctX1nvXcsGsXPfuvfrlzodQ8yQUGlXDTxVTc9pbVBw8">
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full pt-section-gap pb-12 bg-primary-container dark:bg-primary-container">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop mx-auto">
+<div class="md:col-span-4 flex flex-col mb-12 md:mb-0">
+<img alt="Easy Eyes Logo" class="h-12 w-auto mb-6 brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATaGZZaPr-N-lcKKwCj2Wg5I-dihjvDIAbe0ER9S2HkOcel5zCY3xptc-0c-HqAiGGzuWCvImdVQrJPXX4AT8sQfSifNB_3usMohHjh8Nnxu66vcXnQ09zEtE1H9J72rt8IhOzj5pdyQazlYJoXvkY4PpTMFMQtbkLHMmgxvsIbsuWpWMz4BU72bpXBFQ3Vwrn-qU88h1iVQ2u1WQPBitB8nHLDHC_z8hiuA7gCSryU72Srwj-6B2r5i2gibmoD_uRsWa9TVB7kUg">
+<p class="font-body-md text-body-md text-on-primary-container/80 max-w-sm">
+                    Curating timeless eyewear for the modern mover. Excellence in vision, uncompromising in style.
+                </p>
+</div>
+<div class="md:col-span-8 flex flex-col md:flex-row justify-end gap-12 md:gap-24">
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-secondary-fixed uppercase tracking-widest mb-2">Explore</span>
+<a class="font-body-md text-body-md text-on-primary-container/80 hover:text-secondary-fixed transition-colors duration-300 w-fit" href="#">Shop by Face Shape</a>
+<a class="font-body-md text-body-md text-on-primary-container/80 hover:text-secondary-fixed transition-colors duration-300 w-fit" href="#">Shop by Frame Shape</a>
+<a class="font-body-md text-body-md text-on-primary-container/80 hover:text-secondary-fixed transition-colors duration-300 w-fit" href="#">Shop by Brand</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-secondary-fixed uppercase tracking-widest mb-2">Legal</span>
+<a class="font-body-md text-body-md text-on-primary-container/80 hover:text-secondary-fixed transition-colors duration-300 w-fit" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-primary-container/80 hover:text-secondary-fixed transition-colors duration-300 w-fit" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="md:col-span-12 mt-16 pt-8 border-t border-outline/20 flex flex-col md:flex-row justify-between items-center text-sm text-on-primary-container/60 font-body-md">
+<p>© 2025 EASY EYES. Curated by Ronak Baweja.</p>
+<div class="flex space-x-4 mt-4 md:mt-0">
+<a class="hover:text-secondary-fixed transition-colors" href="#">Instagram</a>
+<a class="hover:text-secondary-fixed transition-colors" href="#">Journal</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-section').forEach((section) => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body></html>

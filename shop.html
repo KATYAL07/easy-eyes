@@ -1,0 +1,494 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Shop | EASY EYES</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container": "#f2f0c8",
+                "on-secondary": "#ffffff",
+                "tertiary-fixed": "#fcdeb6",
+                "surface-dim": "#dedcb5",
+                "surface-bright": "#fdfbd3",
+                "on-primary-fixed-variant": "#544435",
+                "on-tertiary": "#ffffff",
+                "on-secondary-container": "#716041",
+                "surface-container-lowest": "#ffffff",
+                "secondary-fixed": "#f7dfb9",
+                "on-primary-container": "#9a8674",
+                "on-primary-fixed": "#25190d",
+                "primary": "#150a02",
+                "on-error": "#ffffff",
+                "primary-fixed": "#f7deca",
+                "tertiary": "#150b00",
+                "tertiary-container": "#2f2006",
+                "on-secondary-fixed-variant": "#544528",
+                "on-surface-variant": "#4e453e",
+                "on-secondary-fixed": "#251a03",
+                "outline": "#7f756d",
+                "on-tertiary-fixed": "#271902",
+                "on-surface": "#1c1d05",
+                "inverse-primary": "#dac2af",
+                "surface-container-high": "#eceac3",
+                "primary-container": "#2d2013",
+                "secondary-fixed-dim": "#dac49e",
+                "on-tertiary-fixed-variant": "#574426",
+                "on-error-container": "#93000a",
+                "background": "#fdfbd3",
+                "surface-container-highest": "#e6e4be",
+                "primary-fixed-dim": "#dac2af",
+                "secondary-container": "#f4ddb6",
+                "tertiary-fixed-dim": "#dec29c",
+                "on-background": "#1c1d05",
+                "outline-variant": "#d1c4bb",
+                "error-container": "#ffdad6",
+                "inverse-surface": "#323217",
+                "surface-variant": "#e6e4be",
+                "on-primary": "#ffffff",
+                "on-tertiary-container": "#9f8664",
+                "secondary": "#6d5c3d",
+                "error": "#ba1a1a",
+                "surface-tint": "#6d5b4b",
+                "surface-container-low": "#f8f6ce",
+                "surface": "#fdfbd3",
+                "inverse-on-surface": "#f5f3cb"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "section-gap": "120px",
+                "margin-mobile": "20px",
+                "content-gap": "48px",
+                "gutter": "24px",
+                "margin-desktop": "80px"
+        },
+        "fontFamily": {
+                "headline-lg": [
+                        "Montserrat"
+                ],
+                "label-caps": [
+                        "Montserrat"
+                ],
+                "body-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "display-lg": [
+                        "Montserrat"
+                ],
+                "headline-lg-mobile": [
+                        "Montserrat"
+                ],
+                "body-md": [
+                        "Plus Jakarta Sans"
+                ],
+                "headline-md": [
+                        "Montserrat"
+                ]
+        },
+        "fontSize": {
+                "headline-lg": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-caps": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.15em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "64px",
+                        {
+                                "lineHeight": "72px",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "letterSpacing": "0.02em",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .hover-zoom img {
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .hover-zoom:hover img {
+            transform: scale(1.05);
+        }
+        .filter-checkbox:checked + label {
+            font-weight: 700;
+            color: #150a02; /* primary */
+        }
+        .filter-checkbox:checked + label .check-icon {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-secondary-fixed">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full bg-surface/80 dark:bg-surface-container-low/80 backdrop-blur-md flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 z-50 border-b border-outline-variant/30">
+<div class="flex items-center gap-12">
+<a class="flex items-center" href="#">
+<img alt="EASY EYES Logo" class="h-8 md:h-10 w-auto object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATaGZZaPr-N-lcKKwCj2Wg5I-dihjvDIAbe0ER9S2HkOcel5zCY3xptc-0c-HqAiGGzuWCvImdVQrJPXX4AT8sQfSifNB_3usMohHjh8Nnxu66vcXnQ09zEtE1H9J72rt8IhOzj5pdyQazlYJoXvkY4PpTMFMQtbkLHMmgxvsIbsuWpWMz4BU72bpXBFQ3Vwrn-qU88h1iVQ2u1WQPBitB8nHLDHC_z8hiuA7gCSryU72Srwj-6B2r5i2gibmoD_uRsWa9TVB7kUg">
+</a>
+<nav class="hidden md:flex items-center gap-8 font-label-caps text-label-caps">
+<a class="text-on-surface-variant dark:text-on-surface-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Home</a>
+<a class="text-primary dark:text-primary-fixed border-b border-primary/50 pb-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Shop</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Brands</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Face Shapes</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<button aria-label="Search" class="text-primary hover:opacity-70 transition-opacity duration-200">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button aria-label="Account" class="text-primary hover:opacity-70 transition-opacity duration-200">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button aria-label="Cart" class="text-primary hover:opacity-70 transition-opacity duration-200">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="min-h-screen px-margin-mobile md:px-margin-desktop py-12 md:py-24">
+<!-- Page Header -->
+<div class="mb-16 md:mb-24 max-w-3xl">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Curated Collection</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Discover our hand-selected range of premium eyewear, designed to complement your unique style and facial structure.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Filters Sidebar -->
+<aside class="w-full lg:w-1/4 flex-shrink-0 space-y-12">
+<!-- Face Shape Filter -->
+<div>
+<h3 class="font-label-caps text-label-caps text-primary mb-6 border-b border-outline-variant/30 pb-2">Shop by Face Shape</h3>
+<div class="grid grid-cols-2 gap-4">
+<label class="flex flex-col items-center justify-center p-4 border border-outline-variant/50 rounded-lg cursor-pointer hover:bg-surface-variant transition-colors group">
+<input class="sr-only filter-checkbox" name="face_shape" type="checkbox" value="round">
+<div class="w-12 h-12 rounded-full border-2 border-outline-variant group-hover:border-primary mb-2 transition-colors flex items-center justify-center relative">
+<div class="w-8 h-8 rounded-full border border-outline-variant group-hover:border-primary transition-colors"></div>
+<span class="material-symbols-outlined absolute text-primary opacity-0 check-icon transition-opacity">check</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant text-center">Round</span>
+</label>
+<label class="flex flex-col items-center justify-center p-4 border border-outline-variant/50 rounded-lg cursor-pointer hover:bg-surface-variant transition-colors group">
+<input class="sr-only filter-checkbox" name="face_shape" type="checkbox" value="square">
+<div class="w-12 h-12 border-2 border-outline-variant group-hover:border-primary mb-2 transition-colors flex items-center justify-center relative">
+<div class="w-8 h-8 border border-outline-variant group-hover:border-primary transition-colors"></div>
+<span class="material-symbols-outlined absolute text-primary opacity-0 check-icon transition-opacity">check</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant text-center">Square</span>
+</label>
+<label class="flex flex-col items-center justify-center p-4 border border-outline-variant/50 rounded-lg cursor-pointer hover:bg-surface-variant transition-colors group">
+<input class="sr-only filter-checkbox" name="face_shape" type="checkbox" value="oval">
+<div class="w-12 h-16 rounded-full border-2 border-outline-variant group-hover:border-primary mb-2 transition-colors flex items-center justify-center relative">
+<div class="w-8 h-12 rounded-full border border-outline-variant group-hover:border-primary transition-colors"></div>
+<span class="material-symbols-outlined absolute text-primary opacity-0 check-icon transition-opacity">check</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant text-center">Oval</span>
+</label>
+<label class="flex flex-col items-center justify-center p-4 border border-outline-variant/50 rounded-lg cursor-pointer hover:bg-surface-variant transition-colors group">
+<input class="sr-only filter-checkbox" name="face_shape" type="checkbox" value="heart">
+<div class="w-12 h-12 mb-2 flex items-center justify-center relative">
+<!-- Simple heart shape placeholder using CSS borders -->
+<div class="w-8 h-8 bg-transparent border-t-2 border-l-2 border-outline-variant group-hover:border-primary rotate-45 transform origin-bottom-right transition-colors"></div>
+<span class="material-symbols-outlined absolute text-primary opacity-0 check-icon transition-opacity">check</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant text-center">Heart</span>
+</label>
+<label class="flex flex-col items-center justify-center p-4 border border-outline-variant/50 rounded-lg cursor-pointer hover:bg-surface-variant transition-colors group">
+<input class="sr-only filter-checkbox" name="face_shape" type="checkbox" value="diamond">
+<div class="w-12 h-12 mb-2 flex items-center justify-center relative">
+<div class="w-6 h-6 border-2 border-outline-variant group-hover:border-primary rotate-45 transition-colors"></div>
+<span class="material-symbols-outlined absolute text-primary opacity-0 check-icon transition-opacity">check</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant text-center">Diamond</span>
+</label>
+<label class="flex flex-col items-center justify-center p-4 border border-outline-variant/50 rounded-lg cursor-pointer hover:bg-surface-variant transition-colors group">
+<input class="sr-only filter-checkbox" name="face_shape" type="checkbox" value="pear">
+<div class="w-12 h-12 mb-2 flex items-center justify-center relative">
+<div class="w-8 h-10 border-2 border-outline-variant group-hover:border-primary transition-colors" style="border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;"></div>
+<span class="material-symbols-outlined absolute text-primary opacity-0 check-icon transition-opacity">check</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant text-center">Pear</span>
+</label>
+</div>
+</div>
+<!-- Frame Shape Filter -->
+<div>
+<h3 class="font-label-caps text-label-caps text-primary mb-4 border-b border-outline-variant/30 pb-2">Shop by Frame Shape</h3>
+<ul class="space-y-3">
+<li class="">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox text-primary bg-surface border-outline-variant focus:ring-primary rounded-sm h-4 w-4 transition duration-150 ease-in-out filter-checkbox" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Aviator</span>
+</label>
+</li>
+<li class="">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox text-primary bg-surface border-outline-variant focus:ring-primary rounded-sm h-4 w-4 transition duration-150 ease-in-out filter-checkbox" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Wayfarer</span>
+</label>
+</li>
+<li class="">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox text-primary bg-surface border-outline-variant focus:ring-primary rounded-sm h-4 w-4 transition duration-150 ease-in-out filter-checkbox" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Cat-Eye</span>
+</label>
+</li>
+<li class="">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox text-primary bg-surface border-outline-variant focus:ring-primary rounded-sm h-4 w-4 transition duration-150 ease-in-out filter-checkbox" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Round</span>
+</label>
+</li>
+<li class="">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox text-primary bg-surface border-outline-variant focus:ring-primary rounded-sm h-4 w-4 transition duration-150 ease-in-out filter-checkbox" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Rectangle</span>
+</label>
+</li>
+<li class="">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox text-primary bg-surface border-outline-variant focus:ring-primary rounded-sm h-4 w-4 transition duration-150 ease-in-out filter-checkbox" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Geometric</span>
+</label>
+</li>
+<li class="">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox text-primary bg-surface border-outline-variant focus:ring-primary rounded-sm h-4 w-4 transition duration-150 ease-in-out filter-checkbox" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Oversized</span>
+</label>
+</li>
+</ul>
+</div>
+<!-- Brand Filter -->
+<div>
+<h3 class="font-label-caps text-label-caps text-primary mb-4 border-b border-outline-variant/30 pb-2">Shop by Brand</h3>
+<ul class="space-y-3">
+<li class="">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox text-primary bg-surface border-outline-variant focus:ring-primary rounded-sm h-4 w-4 transition duration-150 ease-in-out filter-checkbox" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Tom Ford</span>
+</label>
+</li>
+<li class="">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox text-primary bg-surface border-outline-variant focus:ring-primary rounded-sm h-4 w-4 transition duration-150 ease-in-out filter-checkbox" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Oliver Peoples</span>
+</label>
+</li>
+<li class="">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox text-primary bg-surface border-outline-variant focus:ring-primary rounded-sm h-4 w-4 transition duration-150 ease-in-out filter-checkbox" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Persol</span>
+</label>
+</li>
+<li class="">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox text-primary bg-surface border-outline-variant focus:ring-primary rounded-sm h-4 w-4 transition duration-150 ease-in-out filter-checkbox" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Ray-Ban</span>
+</label>
+</li>
+</ul>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="w-full lg:w-3/4">
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-outline-variant/30">
+<span class="font-body-md text-body-md text-on-surface-variant">Showing 24 results</span>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Sort by:</span>
+<select class="bg-transparent border-none text-primary font-body-md focus:ring-0 cursor-pointer pr-8">
+<option>Featured</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Newest Arrivals</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-16">
+<!-- Product Card 1 -->
+<div class="group relative flex flex-col hover-zoom">
+<div class="relative aspect-[4/3] bg-surface-container-low rounded-lg overflow-hidden mb-6 flex items-center justify-center">
+<img alt="Product Image" class="object-contain w-[80%] h-[80%] mix-blend-multiply" data-alt="A close up, high key studio shot of a pair of classic tortoiseshell wayfarer sunglasses resting on a smooth, warm cream colored surface. The lighting is soft and diffused, creating gentle highlights on the glossy acetate frames, emphasizing the luxury old-money aesthetic. The background is minimalistic and sun-drenched, keeping the focus entirely on the premium eyewear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARKxt9nentDQbdjw5jqe3tUs7b4E3GlH3OrpkoBAWapKap_qo5K5l8Py8bnB_48ovowNKEKdUgEv3lXhmBcmsqe6vRbF08vDP4V9ZqcFFL7hfNoUVEyCKEDHTqzYURIZ-aga5tcdyr5AsDvd8Bhk9zplzCwNqfrqGQNX8_LzMnfw5wwatBHxeU-UReUuPzXgVtRtCN5M6xPzKFfjfxh8KH6pFD2hq2AePLc0jQf8Z6p-9xuHIfuS_iM6Fc42TTOXhfxqbp3UY6_-w">
+<!-- Quick Add Button -->
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0 bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-primary/90 shadow-sm">
+                                Quick Add
+                            </button>
+<!-- Tag -->
+<span class="absolute top-4 left-4 bg-primary text-secondary-fixed font-label-caps text-[10px] px-2 py-1 rounded">Bestseller</span>
+</div>
+<div class="text-center space-y-2">
+<p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest uppercase">Oliver Peoples</p>
+<h3 class="font-headline-md text-[18px] text-primary">Gregory Peck</h3>
+<p class="font-body-md text-on-surface-variant">₹380.00</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative flex flex-col hover-zoom">
+<div class="relative aspect-[4/3] bg-surface-container-low rounded-lg overflow-hidden mb-6 flex items-center justify-center">
+<img alt="Product Image" class="object-contain w-[80%] h-[80%] mix-blend-multiply" data-alt="An elegant, minimalist product shot of thin gold wire-rimmed aviator sunglasses placed delicately on a slightly textured beige background. Warm, directional sunlight casts long, soft shadows, evoking a timeless, high-end lookbook feel. The overall color palette is warm and sophisticated, aligning with a luxury corporate identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeDzS8I_4jSX4hscrUj6dQNxGvlB6H53sL54gYcGIGic_TSrEpDeuWq6Xp1_sLbKj1i6nIwoHFQdcT5MF_haRzDAFFA9zBkVBB5oFocvRtaoajsC6ewlXBgVIHOOnt3Rg38gp1WuXrC6eirnowUENc4Y-s1VlIL3GHnMWpIh7i-LKRfAUWInrj5TotaV2oVzv39JUxtS7zlseK-9i90d7Wd53XkiiBIee7vmjkCk0u8C7_4UJlP47e71wQGXpUtS5SlgoFKUBH7DE">
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0 bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-primary/90 shadow-sm">
+                                Quick Add
+                            </button>
+</div>
+<div class="text-center space-y-2">
+<p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest uppercase">Tom Ford</p>
+<h3 class="font-headline-md text-[18px] text-primary">Marko Aviator</h3>
+<p class="font-body-md text-on-surface-variant">₹450.00</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative flex flex-col hover-zoom">
+<div class="relative aspect-[4/3] bg-surface-container-low rounded-lg overflow-hidden mb-6 flex items-center justify-center">
+<img alt="Product Image" class="object-contain w-[80%] h-[80%] mix-blend-multiply" data-alt="A sleek, modern photograph of bold, thick black rectangular sunglasses resting on a subtle espresso-tinted surface. The lighting is pristine and editorial, highlighting the sharp angles and high-quality finish of the frames. The mood is quiet luxury, perfectly suited for a premium ecommerce catalog with a sun-drenched, minimal aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUdzsNlgSh7gj2XAm3h9iKI66ku5syIx_m6Hzh1--C1L6HO0OFe0woWUHIbGtCaSckzUHJWnGOf9ocBp3_qeegHIjkv3mYuvm1I4qaCv6upgwXBE_7tBsKO8LAgdRheM9WNQRUnaf5SG45ONjMiEoE8_v06oZ5s0dCJpNdkyi-P_d-xR7euHF-8fWBjnzkHNHFeQZY-S0pRFO6ShN_iaplZsgCZrqTNMi7mvRO54kO8Q9mJlBFmqsPvbMiFmIBgMyQqQMUYr-ccTQ">
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0 bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-primary/90 shadow-sm">
+                                Quick Add
+                            </button>
+<span class="absolute top-4 left-4 bg-primary text-secondary-fixed font-label-caps text-[10px] px-2 py-1 rounded">New Arrival</span>
+</div>
+<div class="text-center space-y-2">
+<p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest uppercase">Persol</p>
+<h3 class="font-headline-md text-[18px] text-primary">Steve McQueen</h3>
+<p class="font-body-md text-on-surface-variant">₹480.00</p>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative flex flex-col hover-zoom">
+<div class="relative aspect-[4/3] bg-surface-container-low rounded-lg overflow-hidden mb-6 flex items-center justify-center">
+<img alt="Product Image" class="object-contain w-[80%] h-[80%] mix-blend-multiply" data-alt="A sophisticated macro shot of round, vintage-inspired sunglasses with light brown tinted lenses, set against a very pale cream backdrop. Subtle ambient shadows create a sense of depth without looking heavy. The composition is asymmetrical, echoing high-end fashion magazines and reinforcing an established, old-money style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUANzEdJIOL9c7xjtFPyGIEOQuEZqAs5Wwy9DDBitJTaKXTULMSs6YNyLNhLJ_hhHkY5dcoIdZeKZ7EaMGA0CAXpFdcyTsz1nsqssVqcX7u2Zgi0lb7tv4z2CT8cfAxjmF8Yrv8AVIolSJQ14CAE5y6s-gXP3DM3PEaKtGbS4jWdFHmEuA7NhapEOOXsLCSDklXLvoaUfKj6SndbRAt9hA24H0USZDXa1VmL6ki8-xlpRastZmBn_cdGjGyqBHHu3x1rxT5u-pOMc">
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0 bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-primary/90 shadow-sm">
+                                Quick Add
+                            </button>
+</div>
+<div class="text-center space-y-2">
+<p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest uppercase">Ray-Ban</p>
+<h3 class="font-headline-md text-[18px] text-primary">Round Metal</h3>
+<p class="font-body-md text-on-surface-variant">₹165.00</p>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group relative flex flex-col hover-zoom">
+<div class="relative aspect-[4/3] bg-surface-container-low rounded-lg overflow-hidden mb-6 flex items-center justify-center">
+<img alt="Product Image" class="object-contain w-[80%] h-[80%] mix-blend-multiply" data-alt="A luxurious top-down view of cat-eye style sunglasses with a deep burgundy frame, resting on a clean, soft off-white surface. The lighting creates a gentle, lifted paper effect shadow beneath the glasses. The aesthetic is extremely clean, minimalist, and editorial, suitable for a premium heritage brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIeLAoacb3dsb37XOkDv7_MHSQUhIYcSGndukFTvJGD8APwPWYPSHTtwNr7IrICTUbWeCOqG498GQSjzwYMrXPc5weZpNfEM8smrUEraub3W0WIUzTE16WoXvSeHal2oewhGg_Eu1TSKBczNHHvMMze9EXsQtdXEFWpf5ZWP0S1Ac-yrw5ZpHDb-N-FUVFrP2IGvyLylrVRLhhv_YbNv-LW5-9sgQ1p_jf9fccUm9JL2HAPJmZ14LicI180NdXIt-dVVY_xlFmZPk">
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0 bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-primary/90 shadow-sm">
+                                Quick Add
+                            </button>
+</div>
+<div class="text-center space-y-2">
+<p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest uppercase">Celine</p>
+<h3 class="font-headline-md text-[18px] text-primary">Triomphe Cat Eye</h3>
+<p class="font-body-md text-on-surface-variant">₹510.00</p>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group relative flex flex-col hover-zoom">
+<div class="relative aspect-[4/3] bg-surface-container-low rounded-lg overflow-hidden mb-6 flex items-center justify-center">
+<img alt="Product Image" class="object-contain w-[80%] h-[80%] mix-blend-multiply" data-alt="An editorial style still life of clear acetate framed glasses with blue-light lenses, positioned elegantly on a warm, sun-drenched surface. The lighting is crisp yet soft, highlighting the transparency and premium build of the frames. The overall scene conveys quiet confidence and high-end minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6bbweP1iHH_WPQLC5_4r9lPMmCSn9sIfvyNx9x5cMWzu3Df83xuTYrutFx22f9GqkhCxyvKaM8NuMbRdtyfc8iStRGCMHiIHis7Qp1ZaTkcfPDnsJQZcgSn098TaPoX4M4CGhe3k_aILAM40Fzni39to3lqCPeRyNitmRsV34q4qsqs6CHt_PLVfSOXGtYxrKbQO-ewaEQkMksLv_Kille1uaENTGs5-VS55iiC7Au3omlyiDzSwt1UDrYE3HUjUNJR2jyjKIz5Q">
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0 bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded hover:bg-primary/90 shadow-sm">
+                                Quick Add
+                            </button>
+</div>
+<div class="text-center space-y-2">
+<p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest uppercase">Moscot</p>
+<h3 class="font-headline-md text-[18px] text-primary">Lemtosh Crystal</h3>
+<p class="font-body-md text-on-surface-variant">₹340.00</p>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-24 flex justify-center items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant/50 rounded hover:border-primary transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center bg-primary text-secondary-fixed font-label-caps rounded">1</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant/50 hover:border-primary font-label-caps rounded transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant/50 hover:border-primary font-label-caps rounded transition-colors">3</button>
+<span class="font-label-caps text-on-surface-variant">...</span>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant/50 rounded hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-section-gap pb-12 bg-primary-container dark:bg-primary-container">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop mx-auto">
+<div class="md:col-span-4 flex flex-col justify-between mb-8 md:mb-0">
+<a class="block mb-6" href="#">
+
+</a>
+<p class="font-body-md text-body-md text-on-primary-container/80 mt-auto">
+                    © 2025 EASY EYES. Curated by Ronak Baweja.
+                </p>
+</div>
+<div class="md:col-span-8 flex flex-wrap gap-x-16 gap-y-8 md:justify-end">
+<nav class="flex flex-col gap-4 font-body-md text-body-md text-on-primary-container/80">
+<a class="hover:text-secondary-fixed transition-colors duration-300" href="#">Shop by Face Shape</a>
+<a class="hover:text-secondary-fixed transition-colors duration-300" href="#">Shop by Frame Shape</a>
+<a class="hover:text-secondary-fixed transition-colors duration-300" href="#">Shop by Brand</a>
+</nav>
+<nav class="flex flex-col gap-4 font-body-md text-body-md text-on-primary-container/80">
+<a class="hover:text-secondary-fixed transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="hover:text-secondary-fixed transition-colors duration-300" href="#">Terms of Service</a>
+</nav>
+</div>
+</div>
+</footer>
+
+
+</body></html>
