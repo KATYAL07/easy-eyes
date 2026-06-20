@@ -15,7 +15,7 @@ export const TransitionProvider = ({ children }) => {
   const navigateWithTransition = (to) => {
     // Prevent double transitions or transitions to empty/hash targets
     if (isTransitioning || !to || to.startsWith('#')) return;
-    
+
     // Normalize target path (if transitioning to current path, we can still show it or transition normally)
     setTargetPath(to);
     setIsTransitioning(true);
