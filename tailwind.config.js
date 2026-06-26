@@ -63,11 +63,11 @@ export default {
           "full": "0.75rem"
       },
       "spacing": {
-          "margin-mobile": "20px",
-          "content-gap": "48px",
-          "margin-desktop": "80px",
-          "gutter": "24px",
-          "section-gap": "120px"
+          "margin-mobile": "16px",
+          "content-gap": "32px",
+          "margin-desktop": "48px",
+          "gutter": "16px",
+          "section-gap": "80px"
       },
       "fontFamily": {
           "headline-md": ["Montserrat"],
@@ -79,13 +79,13 @@ export default {
           "body-md": ["Plus Jakarta Sans"]
       },
       "fontSize": {
-          "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "600" }],
-          "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "0.05em", "fontWeight": "700" }],
-          "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }],
-          "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-          "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "0.1em", "fontWeight": "700" }],
-          "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "0.05em", "fontWeight": "700" }],
-          "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+          "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+          "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+          "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+          "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+          "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+          "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }]
       },
       keyframes: {
         marquee: {

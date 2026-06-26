@@ -23,7 +23,7 @@ export default function Layout() {
         </div>
         <div className="flex-1 flex justify-center">
             <Link to="/" className="flex items-center">
-                <img alt="Easy Eyes Logo" className="h-16 md:h-20 w-auto object-contain mix-blend-multiply" src="/logo.png" />
+                <img alt="Easy Eyes Logo" className="h-10 md:h-12 w-auto object-contain mix-blend-multiply" src="/logo.png" />
             </Link>
         </div>
         <div className="flex-1 flex justify-end items-center space-x-6 text-on-surface-variant">

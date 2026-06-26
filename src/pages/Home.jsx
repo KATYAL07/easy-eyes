@@ -21,8 +21,8 @@ export default function Home() {
 
   return (
     <>
-      <header className="relative w-full h-[870px] flex items-center justify-center overflow-hidden">
-        <img alt="A high-end fashion editorial shot of a person wearing stylish sunglasses in a sun-drenched architectural setting. Warm golden hour lighting casts sharp, dramatic shadows, conveying timeless luxury and modern confidence. The overarching aesthetic relies on warm earthy tones, deep espresso shadows, and a sophisticated, minimalist composition." className="absolute inset-0 w-full h-full object-cover object-center z-0 scale-105 transform origin-center" data-alt="A high-end fashion editorial shot of a person wearing stylish sunglasses in a sun-drenched architectural setting. Warm golden hour lighting casts sharp, dramatic shadows, conveying timeless luxury and modern confidence. The overarching aesthetic relies on warm earthy tones, deep espresso shadows, and a sophisticated, minimalist composition." src="/hero-image.png" style={{ animation: "subtleZoom 20s infinite alternate" }} />
+      <header className="relative w-full overflow-hidden bg-surface flex items-center justify-center">
+        <img alt="A high-end fashion editorial shot of a person wearing stylish sunglasses in a sun-drenched architectural setting. Warm golden hour lighting casts sharp, dramatic shadows, conveying timeless luxury and modern confidence. The overarching aesthetic relies on warm earthy tones, deep espresso shadows, and a sophisticated, minimalist composition." className="w-full h-auto block transform origin-center" data-alt="A high-end fashion editorial shot of a person wearing stylish sunglasses in a sun-drenched architectural setting. Warm golden hour lighting casts sharp, dramatic shadows, conveying timeless luxury and modern confidence. The overarching aesthetic relies on warm earthy tones, deep espresso shadows, and a sophisticated, minimalist composition." src="/hero-image.png" style={{ animation: "subtleZoom 20s infinite alternate" }} />
       </header>
 
       <div className="flex justify-center py-12 bg-surface fade-in-section">
